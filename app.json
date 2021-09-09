@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Servisale-Provider",
+    "slug": "Servisale-Provider",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Servisale-Provider"
+}
