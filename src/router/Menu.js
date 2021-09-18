@@ -284,15 +284,15 @@ function UserInactiveNavigator() {
 export default function Menu() {
   const [loading, setLoading] = useState(true);
   const [status, setStatus] = useState("active");
-  const [userSendDocument, setUserSendDocument] = useState(false);
+  const [userSendDocument, setUserSendDocument] = useState(true);
 
-  const userData = useSelector((state) => state.user.profile);
+  // const userData = useSelector((state) => state.user.profile);
 
   async function loadStatusUser() {
-    const response = await api.get(`/users/${userData.id}`);
+    // const response = await api.get(`/users/${userData.id}`);
 
-    setStatus(response.data.status);
-    setUserSendDocument(response.data.send_document);
+    // setStatus(response.data.status);
+    // setUserSendDocument(response.data.send_document);
 
     setLoading(false);
   }
@@ -333,7 +333,13 @@ export default function Menu() {
               )}
             </>
           ) : (
-            <SendDocuments />
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
+              <Stack.Screen
+                name="HomeInitialStack"
+                component={UserInactiveNavigator}
+              />
+            </Stack.Navigator>
+            // <SendDocuments />
           )}
         </>
       )}

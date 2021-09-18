@@ -11,16 +11,16 @@ import AuthContext from "./pages/Auth/AuthContext";
 
 export default function App() {
   const [registred, setRegistred] = useState(false);
-  const signed = useSelector((state) => state.auth.signed);
+  // const signed = useSelector((state) => state.auth.signed);
 
-  const user = useSelector((state) => state.user.profile);
+  // const user = useSelector((state) => state.user.profile);
 
-  console.log(user);
-
+  // console.log(user);
+  // signed={signed}
   return (
-    // <AuthContext.Provider value={{ registred, setRegistred }}>
-    <Routes signed={signed} />
-    // <OneSignalConfig idUser={user} />
-    // </AuthContext.Provider>
+    <AuthContext.Provider value={{ registred, setRegistred }}>
+      <Routes />
+      {/* <OneSignalConfig idUser={user} /> */}
+    </AuthContext.Provider>
   );
 }

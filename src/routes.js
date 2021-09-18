@@ -8,7 +8,8 @@ import Application from "./router/Application";
 export default function Routes({ signed }) {
   return (
     <NavigationContainer independent={1}>
-      {signed ? <Application /> : <Auth />}
+      <Application />
+      {/* {signed ? <Application /> : <Auth />} */}
     </NavigationContainer>
   );
 }

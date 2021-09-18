@@ -1,13 +1,8 @@
 import styled from "styled-components/native";
-import TextInputMask from "react-native-text-input-mask";
+
 import colors from "../../../../utils/GlobalStyles/colors";
 
-export const InputMask = styled(TextInputMask).attrs({
-  keyboardType: "numeric",
-  autoCorrect: false,
-  autoCapitalize: "none",
-  placeholderTextColor: "rgba(255, 255, 255, 0.6)",
-})`
+export const InputMask = styled.TextInput`
   font-size: 16px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 0.5px solid #fafafa;
@@ -15,12 +10,7 @@ export const InputMask = styled(TextInputMask).attrs({
   padding: 18px 20px;
   color: ${colors.Secundary};
 `;
-export const InputMask2 = styled(TextInputMask).attrs({
-  keyboardType: "numeric",
-  autoCorrect: false,
-  autoCapitalize: "none",
-  placeholderTextColor: "#fff",
-})`
+export const InputMask2 = styled.TextInput`
   font-size: 16px;
   padding: 18px 20px;
   color: #fff;
